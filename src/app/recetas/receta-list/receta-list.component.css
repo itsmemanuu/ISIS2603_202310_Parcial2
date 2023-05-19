@@ -1,0 +1,9 @@
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
+.btn-primary {
+  border-color: #F16194 !important;
+  background-color: #F16194;
+  }

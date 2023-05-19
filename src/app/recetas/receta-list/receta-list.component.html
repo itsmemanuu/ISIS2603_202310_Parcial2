@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div *ngIf="selected">
+    <app-receta-detail [receta]="recetaSeleccionada"></app-receta-detail>
+  </div>
+</div>
+
+<br/>
+
+<p>**La Calificación promedio es de {{promedio}} con un registro de {{opiniones}} opiniones **</p>
+
+<br/>
+
+<div class="row">
+  <div *ngFor="let receta of recetas" class="col-3">
+    <div class="card text-center" style="width: 18rem;">
+      <h5 class="card-title" style="font-weight: 600;">{{receta.nombre}}</h5>
+      <img class="card-img" src="{{receta.imagen}}" alt="Card image cap">
+      <div class="card-body">
+        <p>Calificación: {{receta.estrellas}} de {{receta.cantidadOpiniones}}</p>
+        <p>Duración: {{receta.duracion}} | Dificultad: {{receta.dificultad}}</p>
+        <p>Por: {{receta.autorReceta}}</p>
+        <a (click)="onSelect(receta)" class="btn btn-primary">Ver receta</a>
+      </div>
+    </div>
+  </div>
+</div>
